@@ -78,6 +78,7 @@ function Price() {
 }
 
 const CoinPriceTable = styled.table`
+	margin: 50px 0;
 	border-collapse: collapse;
 	border-radius: 10px;
 	border-style: hidden;

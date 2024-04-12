@@ -129,7 +129,9 @@ function Coins({ isDark, toggleDark }: IRouterProps) {
 						data!.length > 0 &&
 						data?.slice(0, 100).map((coin) => (
 							<Coin key={coin.id}>
-								<Link to={`/${coin.id}`} state={coin}>
+								<Link
+									to={`/react-master/${coin.id}`}
+									state={coin}>
 									<Img
 										src={`https://static.coinpaprika.com/coin/${coin.id.toLowerCase()}/logo.png`}></Img>
 									{coin.name} &rarr;
