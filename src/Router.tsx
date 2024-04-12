@@ -13,12 +13,12 @@ function Router({ isDark, toggleDark }: IRouterProps) {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/react-master/:coinId" element={<Coin />}>
+				<Route path="/react-masterclass/:coinId" element={<Coin />}>
 					<Route path="chart" element={<Chart />} />
 					<Route path="price" element={<Price />} />
 				</Route>
 				<Route
-					path="/react-master"
+					path="/react-masterclass"
 					element={<Coins isDark={isDark} toggleDark={toggleDark} />}
 				/>
 			</Routes>

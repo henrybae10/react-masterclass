@@ -163,8 +163,8 @@ function Coin({}: ICoinProps) {
 	const { state } = useLocation() as LocationState;
 	const nav = useNavigate();
 
-	const priceMatch = useMatch("/react-master/:coinId/price");
-	const chartMatch = useMatch("/react-master/:coinId/chart");
+	const priceMatch = useMatch("/react-masterclass/:coinId/price");
+	const chartMatch = useMatch("/react-masterclass/:coinId/chart");
 
 	const { isLoading: detailLoading, data: detailCoin } =
 		useQuery<DetailCoinData>({
@@ -181,7 +181,7 @@ function Coin({}: ICoinProps) {
 	const loading = detailLoading || priceLoading;
 
 	const onClickToHome = () => {
-		nav("/react-master");
+		nav("/react-masterclass");
 	};
 
 	return (
@@ -240,12 +240,12 @@ function Coin({}: ICoinProps) {
 					</Overview>
 					<Tabs>
 						<Tab isActive={chartMatch !== null}>
-							<Link to={`/react-master/${coinId}/chart`}>
+							<Link to={`/react-masterclass/${coinId}/chart`}>
 								chart
 							</Link>
 						</Tab>
 						<Tab isActive={priceMatch !== null}>
-							<Link to={`/react-master/${coinId}/price`}>
+							<Link to={`/react-masterclass/${coinId}/price`}>
 								price
 							</Link>
 						</Tab>
